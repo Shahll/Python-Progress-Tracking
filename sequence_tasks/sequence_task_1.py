@@ -12,7 +12,7 @@
 number = None
 sum = 0
 while number != 0:
-    number = int(input("Write an integer: "))
+    number = int(input("Write an integer(enter 0 to stop): "))
     sum += number
-    print(sum)
-   
+
+print(f"the sum of all numbers is {sum}") 
