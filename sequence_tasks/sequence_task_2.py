@@ -10,16 +10,13 @@
 
 """
 
-numbers = []
-while True:
-    x = int(input("Введіть число (введіть 0 для завершення): "))
-    if x == 0:
-        break
-    #присваивает значения инпута в лист numbers
-    numbers.append(x)
+number = None
+sum = 1
+while number != 0:
+    number = int(input("Write an integer(enter 0 to stop): "))
+    if number != 0:
+        sum *= number
+    else:
+        pass
 
-
-for number in numbers:
-    summa = number + number
-
-print(summa) 
+print(f"The product of all the numbers is {sum}") 
