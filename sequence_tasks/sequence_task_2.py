@@ -15,8 +15,8 @@ sum = 1
 while number != 0:
     number = int(input("Write an integer(enter 0 to stop): "))
     if number != 0:
-        sum *= number
+        product *= number
     else:
         pass
 
-print(f"The product of all the numbers is {sum}") 
+print(f"The product of all the numbers is {product}") 
