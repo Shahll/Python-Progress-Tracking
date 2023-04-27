@@ -1,4 +1,4 @@
-#Python Progress Tracker
+# Python Progress Tracker
 
 Welcome to my Python Progress Tracker repository! This repository serves as an archive of my Python learning journey. Here you can find all the projects and exercises I've completed, and see how far I've come in my Python journey.
 
