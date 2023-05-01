@@ -8,7 +8,7 @@
     """
     
 
-array = [ 1, 2, 3, 0, 4, 5, 6, 1, 2, 6, 0]
+array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 0, 1 ]
 
 
 
@@ -17,34 +17,63 @@ for numbers in array:
     if numbers == 0:
         zero_counter += 1
         
-        
+
+
+
+
 minimal_number = array[0]
-minimal_counter = -1
+minimal_counter = 0
+
 for numbers in array:
     if minimal_number > numbers:
         minimal_number = numbers
-      
-    if numbers == minimal_number:
+        minimal_counter = 1
+    elif minimal_number == numbers:
         minimal_counter += 1
-
-
+           
+           
+           
+           
+           
 maximal_number = array[0]
-maximal_counter = -1
+maximal_counter = 0
+
 for numbers in array:
-    if maximal_number > numbers:
+    if maximal_number < numbers:
         miximal_number = numbers
-      
-    if numbers == maximal_number:
+        maximal_counter = 1
+    elif numbers == maximal_number:
+        maximal_counter += 1
+        
+        
+        
+        
+maximal_number = array[0]
+maximal_counter = 0
+
+for numbers in array:
+    if maximal_number < numbers:
+        maximal_number = numbers  
+        maximal_counter = 1  
+    elif numbers == maximal_number:
         maximal_counter += 1
 
+
 print("array:", array)
-print(f"Number of maximal numbers is: {maximal_counter}")
-print(f"Number of minimal numbers is: {minimal_counter}")
+print(f"Maximal number is {maximal_number} and it occurred {maximal_counter} times.")
+print(f"Minimal number is {minimal_number} and it occurred {minimal_counter} times.")
 print(f"Number of zero's is: {zero_counter}\n") 
 
 
+      
+           
 
-    
+
+
+
+
+
+
 array = [1, 2, 3, 0, 4, 5, 6, 1, 2, 6, 0]
 search = 2 * 2  
 
@@ -62,3 +91,9 @@ array = [1, 1, 1, 2, 2, 4, 4, 4, 4, 4, 4 ]
 most_common_number = max(set(array), key = array.count)
 
 print(f"array: {array}\nmost common number in array is: {most_common_number}")
+
+
+
+
+
+
