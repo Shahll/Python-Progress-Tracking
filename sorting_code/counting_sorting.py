@@ -19,12 +19,6 @@ def adding_numbers(list_to_add):
 
 
 def counting_sort(list_to_sort, counting_list,sorted_list,):
-    """ 
-        Берем число с конца первого масива.. тоесть 12.. и смотрим на число с этим индексом во втором листе тобто 10..
-        и отнимаем единицу чтобы индексы не повторялись..
-        затем добавляем в третий лист на индекс 10 число 12 
-        
-    """
     for assign in range(len(list_to_sort) - 1, -1, -1):
         index_search = list_to_sort[assign]
         temp = counting_list[index_search]
