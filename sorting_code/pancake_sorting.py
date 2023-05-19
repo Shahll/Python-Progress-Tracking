@@ -1,6 +1,3 @@
-lst = [3, 5, 2, 1, 7, 6, 4]
-
-
 def flip(array,index):
     array[:index + 1 ] = array[:index + 1] [::-1]
     return array
@@ -22,9 +19,7 @@ def pancake_sort(array):
             flip(array,max_indx)
             flip(array,remain - 1)
     return array
-                
-                
-            
-            
-answer = pancake_sort(lst)
-print(answer)
+                     
+# Driver       
+lst = [3, 5, 2, 1, 7, 6, 4]
+print(pancake_sort(lst))
