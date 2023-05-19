@@ -18,8 +18,7 @@ def pancake_sort(array):
         if max_indx != remain - 1:
             flip(array,max_indx)
             flip(array,remain - 1)
-    return array
-                     
+    return array                
 # Driver       
 lst = [3, 5, 2, 1, 7, 6, 4]
 print(pancake_sort(lst))
