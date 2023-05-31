@@ -1,0 +1,1 @@
+print( "abobishe"[::2])
