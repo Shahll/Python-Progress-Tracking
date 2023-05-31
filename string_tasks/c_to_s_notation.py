@@ -1,12 +1,9 @@
-def remake_text(str1):
-    j = -1
+def remake_text1(string):
     for index, char in enumerate(str1):
         if char.isupper():
-            j += 1
-            str1 = str1.lower()
-            str1 = str1[:index + j] + "_" + str1[index + j:]
+            str1 = str1[:index].lower() + "_" + str1[index:]
             
-    print(str1)
+    return string
 # Driver
 str1 = "someTextInSnakeNotation"
-remake_text(str1)
+remake_text1(str1)
