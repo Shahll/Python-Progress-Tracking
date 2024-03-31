@@ -1,0 +1,34 @@
+import re 
+import math
+
+def preprocess_text(text) -> str:
+    text = text.lower()
+    text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+    return text.split()
+
+
+def calculate_cosine_similarity(text1, text2) -> float:
+    tokens1 = preprocess_text(text1)
+    tokens2 = preprocess_text(text2)
+
+    unique_words = set(tokens1).union(set(tokens2))
+
+    vector1 = [tokens1.count(token) for token in unique_words]
+    vector2 = [tokens2.count(token) for token in unique_words]
+
+    dot_product = sum(a * b for a, b in zip(vector1, vector2))
+
+    magnitude1 = math.sqrt(sum(a ** 2 for a in vector1))
+    magnitude2 = math.sqrt(sum(b ** 2 for b in vector2))
+
+    if magnitude1 != 0 and magnitude2 != 0:
+        similarity = dot_product / (magnitude1 * magnitude2)
+    else:
+        similarity = 0
+  
+    return  similarity
+
+if __name__ == "__main__":
+  text1 = "Hello world, I love pizza so much!~"
+  text2 = "I also love pizza!"
+  print(calculate_cosine_similarity(text1, text2))
